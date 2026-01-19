@@ -6,6 +6,7 @@ beamerouterthemescu.sty文件 还有 beamerthemescu.sty文件()
 提醒，这个编译需要 Noto Sans SC 字体，可以自行去https://fonts.google.com/noto/specimen/Noto+Sans+SC 下载。
 
 ![image](https://github.com/JHC-NEWGUY/XJU-Beamer-Theme/blob/b5a6e559380e2e19b32edf93340dcdbcb0e894aa/image/main_xju_%E9%A1%B5%E9%9D%A2_01.jpg)
+![image](https://github.com/JHC-NEWGUY/XJU-Beamer-Theme/blob/0f587448ce5a7e377d6e26b09a0078c8531ebff0/image/main_xju_%E9%A1%B5%E9%9D%A2_02.jpg)
 
 # 四川大学Beamer模板
 本项目参考了Beamer, Tcolorbox等官方文档, 参考了stackoverflow中的诸多问题；
