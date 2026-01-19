@@ -59,6 +59,16 @@
 
 \mode<presentation>
 
+% 让顶部导航条里的 section 显示为“编号”而不是标题
+\setbeamertemplate{section in head/foot}{%
+  \insertsectionheadnumber%
+}
+
+% 非当前 section（灰色/淡色那种）的显示也改成编号
+\setbeamertemplate{section in head/foot shaded}{%
+  \insertsectionheadnumber%
+}
+
 
 % ----------------
 % Beamer Theme Headline Layout
@@ -85,9 +95,9 @@
 % DIMEN:: 章节导航栏宽度(窄边) - wd@secbar.
 \newdimen\beamer@scu@wd@secbar
 \if\EqualOptionsBeamer{LanguageMode}{cn}%
-  \beamer@scu@wd@secbar=0.64\paperwidth%
+  \beamer@scu@wd@secbar=0.3\paperwidth%
 \else\if\EqualOptionsBeamer{LanguageMode}{en}%
-  \beamer@scu@wd@secbar=0.52\paperwidth%
+  \beamer@scu@wd@secbar=0.3\paperwidth%
 \fi\fi
 % DIMEN:: 小节-标题分隔线宽度(窄边) - wd@sectotitleline.
 \newdimen\beamer@scu@wd@sectotitleline
@@ -133,22 +143,29 @@
 
 % 插入章节栏水平导航.
 \def\insert@secbar#1{%
-  % #1:: en LanguageMode 下尾部距离.
   \usebeamerfont{section in head/foot}%
   \usebeamercolor[fg]{section in head/foot}%
   \if\EqualOptionsBeamer{LanguageMode}{cn}%
-    \insertsectionnavigationhorizontal{\beamer@scu@wd@secbar}{}{}%
+    \insertsectionnavigationhorizontal{\beamer@scu@wd@secbar}{章节\hspace{0.8em}}{}%
   \else\if\EqualOptionsBeamer{LanguageMode}{en}%
-    \insertsectionhead\hspace*{#1}%
+    \insertsectionnavigationhorizontal{\beamer@scu@wd@secbar}{Chapter\hspace{0.8em}}{}%
   \fi\fi%
 }
 
+
 % 插入小节标题.
+%\def\insert@subsecbar{%
+%  \usebeamerfont{subsection in head/foot}%
+%  \usebeamercolor[fg]{subsection in head/foot}%
+%  \insertsubsectionhead%
+%}
+
 \def\insert@subsecbar{%
   \usebeamerfont{subsection in head/foot}%
   \usebeamercolor[fg]{subsection in head/foot}%
-  \insertsubsectionhead%
+  \thesection.\arabic{subsection}\hspace{0.6em}\insertsubsectionhead%
 }
+
 
 % 插入小节迷你帧 [采用 \slideentry 方式生成].
 %% 参考::
