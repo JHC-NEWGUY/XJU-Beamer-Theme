@@ -594,6 +594,11 @@
   % #3:: 辅助色.
   \beamer@scu@len@probartmp=\beamer@scu@wd@probar%
   \divide\beamer@scu@len@probartmp by 1000%
+	% --- guard: avoid division by 0 ---
+	\ifnum\beamer@scu@count@totalframe<1\relax
+	\beamer@scu@count@totalframe=1\relax
+	\fi
+	% ----------------------------------  
   \multiply\beamer@scu@len@probartmp by \beamer@scu@count@currentframe%
   \divide\beamer@scu@len@probartmp by \beamer@scu@count@totalframe%
   \multiply\beamer@scu@len@probartmp by 1000%
