@@ -1,5 +1,12 @@
-# 四川大学Beamer模板
+# 新疆大学Beamer模板，来自四川大学beamer模板的修改
+首先，这个模板来自四川大学的Beamer模板，我这边仅仅是做了部分的小改动，具体可以常见pdf。主要的修改是2部分：
+beamerouterthemescu.sty文件 还有 beamerthemescu.sty文件()
+其它就没有做大的改动了。
 
+提醒，这个编译需要 Noto Sans SC 字体，可以自行去https://fonts.google.com/noto/specimen/Noto+Sans+SC 下载。
+
+
+# 四川大学Beamer模板
 本项目参考了Beamer, Tcolorbox等官方文档, 参考了stackoverflow中的诸多问题；
 
 主要参考了中国科学技术大学Beamer模板 [USTCBeamerSX](https://github.com/ysx2000/USTCBeamerSX/), 少量参考了清华大学Beamer模板 [THU-Beamer-Theme](https://github.com/tuna/THU-Beamer-Theme/) 及其衍生的各大学的Beamer模板, 还参考了中国科学技术大学Beamer模板 [ustcbeamer](https://github.com/ustctug/ustcbeamer/).
